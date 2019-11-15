@@ -9,20 +9,8 @@ function mapStateToProps(state) {
 
 class Counter extends React.Component {
   state = { count: 0 }
-
-  increment = () => {
-    // this.setState({
-    //   count: this.state.count + 1
-    // });
-    this.props.dispatch({type: 'GIMME_SOME'});
-  }
-
-  decrement = () => {
-    // this.setState({
-    //   count: this.state.count - 1
-    // });
-    this.props.dispatch({type: 'TAKE_SOME'});
-  }
+  increment = () => { this.props.dispatch({type: 'GIMME_SOME'}); };
+  decrement = () => { this.props.dispatch({type: 'TAKE_SOME'}); };
 
   render() {
     return (

@@ -4,7 +4,7 @@ import Counter from './Counter';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-function reducer(state = {count: 6}, action) {
+export const reducer = (state = {count: 6}, action) => {
   let newCount = state.count;
   switch(action.type) {
     case 'GIMME_SOME':
@@ -20,7 +20,7 @@ function reducer(state = {count: 6}, action) {
   return {
     count: newCount
   };
-}
+};
 
 const store = createStore(reducer);
 
